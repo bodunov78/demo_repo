@@ -84,10 +84,10 @@ def fu5():
     i = 0
     cnt = 0
     a = 0
-    while cnt < 100 and a < 200:
+    while cnt < 100:
         a += 1
         b = a
-        while cnt < 100 and b < 323:
+        while cnt < 100 and b < 200000:  # 323
             b += 1
             c = b
             while cnt < 100 and a ** 2 + b ** 2 >= c ** 2:
