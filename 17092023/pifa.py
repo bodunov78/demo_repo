@@ -57,7 +57,55 @@ def fu3():
                     return (i)
 
 
-fu0()
-fu1()
-fu2()
-fu3()
+def fu4():
+    i = 0
+    cnt = 0
+    a = 0
+    while cnt < 100 and a < 200:
+        a += 1
+        b = a
+        while cnt < 100 and b < 200:
+            b += 1
+            c = b
+            while cnt < 100 and c < 200:
+                c += 1
+                i += 1
+                if a ** 2 + b ** 2 == c ** 2:
+                    cnt += 1
+                    print(a, b, c, cnt)
+                    break
+                elif a ** 2 + b ** 2 < c ** 2:
+                    break
+
+    print(i)
+
+
+def fu5():
+    i = 0
+    cnt = 0
+    a = 0
+    while cnt < 100 and a < 200:
+        a += 1
+        b = a
+        while cnt < 100 and b < 323:
+            b += 1
+            c = b
+            while cnt < 100 and a ** 2 + b ** 2 >= c ** 2:
+                c += 1
+                i += 1
+                if a ** 2 + b ** 2 == c ** 2:
+                    cnt += 1
+                    print(a, b, c, cnt)
+                    break
+                # elif a ** 2 + b ** 2 < c ** 2:
+                #     break
+
+    print(i)
+
+
+# fu0()
+# fu1()
+# fu2()
+# fu3()
+fu4()
+fu5()
