@@ -30,3 +30,7 @@ for i in range(5 ** 5):
     for z in l:
         w += a[int(z)]
     print(w)
+
+m = [str(x) + str(y) + str(z) for x in range(4) for y in range(4) for z in range(4) if
+     len(str(x) + str(y) + str(z)) == len(set(str(x) + str(y) + str(z)))]
+print(m)
