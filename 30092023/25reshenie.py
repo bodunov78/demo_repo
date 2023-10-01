@@ -63,6 +63,8 @@ def fu31():
     #одинаковые символы  могут  встречаться  не более трех  раз  и  стоять  могут  только рядом
 
     s = "ABCDEF"
+    i=0
+    l=[]
     for s1 in s:
         for s2 in s:
             for s3 in s:
@@ -74,8 +76,20 @@ def fu31():
                                 #st.count(s1)<=3 повторяющихся символов не больше 3
                                 #st.count(s7*st.count(s7))==1 все повторяющиеся символы вместе
                                 if (st.count(s1)<=3 and st.count(s2)<=3 and st.count(s3)<=3 and st.count(s4)<=3 and st.count(s5)<=3 and st.count(s6)<=3 and st.count(s7)<=3) and st.count(s1*st.count(s1))==1 and st.count(s2*st.count(s2))==1 and st.count(s3*st.count(s3))==1 and st.count(s4*st.count(s4))==1 and st.count(s5*st.count(s5))==1 and st.count(s6*st.count(s6))==1 and st.count(s7*st.count(s7))==1:
-                                    print(st)
+                                    i+=1
+                                    l.append(st)
+    print(l,len(l))
 
+
+def fu32():
+    #при помощи  циклов  for и while получить все комбинации слов из cловаря(ABCDEF) длиной 7 сиволов,
+    #одинаковые символы  могут  встречаться  не более трех  раз  и  стоять  могут  только рядом
+
+    s = "ABCDEF"
+    a=["".join(x) for x in product(s,repeat=7) if all(x.count(y)<=3   for y in set(x))]
+    m=[x for x in a if (all(x.count(y*x.count(y))==1 for y in set(x)))]
+    # print (a,len(a))
+    print(m,len(m))
 
 
 def fu4():
@@ -89,8 +103,7 @@ def fu4():
                     for s5 in s:
                         for s6 in s:
                             st=s1 + s2 + s3 + s4 + s5 + s6
-                            #st.count(s1)<=3 повторяющихся символов не больше 3
-                            #st.count(s7*st.count(s7))==1 все повторяющиеся символы вместе
+
                             if (st.count(s1)==1 and st.count(s2)==1 and st.count(s3)==1 and st.count(s4)==1 and st.count(s5)==1 and st.count(s6)==1):
                                 i+=1
                                 print(st,i)
@@ -127,4 +140,6 @@ def fu63():
     # print(arr)
 
 # fu6()
-fu11()
+# fu31()
+fu32()
+
