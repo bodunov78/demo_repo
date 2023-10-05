@@ -142,6 +142,9 @@ def fu6():
                 c += 2
     print(i, maxi)
 
+def fifa10():
+    print ("Fifa")
+
 
 # fu()
 # fu0()
