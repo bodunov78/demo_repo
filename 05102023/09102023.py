@@ -178,6 +178,18 @@ def fu35():
 
     print(cnt)
 
+def fu36():
+    cnt = 0
+    s = "012345678"
+    m = ["0"+str(x)+"0" for x in range(10000,88889) if str(x).count('5')==1 and str(x).count('9')==0 ]
+    for y in m:
+        if  fnmatch(y,'*[0,2,4,6,8]5[0,2,4,6,8]*'):
+            print(y[1:6])
+            cnt+=1
+
+    print(cnt)
+
+
 
 # fu11()
 # fu12()
@@ -188,4 +200,5 @@ def fu35():
 # fu23()
 # fu24()
 # fu33()
-fu35()
+#fu35()
+fu36()
