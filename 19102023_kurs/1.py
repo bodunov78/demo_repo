@@ -1,0 +1,10 @@
+a=[91,82,3,4,5,6,2,3,4]
+print (min(a),max(a),len(a),sum(a))
+print(a,sorted(a),sorted(a,reverse=1))
+a.sort()
+print(a)
+a.sort(reverse=1)
+print (a)
+print (set(a))
+a=list(set(a))
+print(a)
