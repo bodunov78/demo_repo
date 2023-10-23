@@ -9,8 +9,11 @@
 # — удвоенная сумма максимального и минимального чисел строки не больше суммы оставшихся трёх её чисел.
 #
 # В ответе запишите только число.
+file=open("1_9.csv","r")
+
+
 cnt=0
-with open("1_9.csv","r") as file:
+with open("1_9.csv") as file:
     for x in file:
         a=list(map(int,x.split(';')))
         if len(a) == len(set(a)):
@@ -22,3 +25,8 @@ with open("1_9.csv","r") as file:
 
 print(cnt)
 
+
+k=('4','5')
+l=('4')
+c=(k&l)
+print (c)

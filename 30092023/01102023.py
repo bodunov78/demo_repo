@@ -44,3 +44,6 @@ for i,x in enumerate(a):
 print(a)
 m=list(set(a))
 print (type(a),type(m),a,m)
+
+for i in range(100):
+    print(i)

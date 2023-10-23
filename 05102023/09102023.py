@@ -1,9 +1,11 @@
 from itertools import *
+
 from fnmatch import *
 
 # 59713
 # Составляют 5-буквенные слова из букв слова ПЯТНИЦА.
-# Найти количество слов, которые не начинаются с Н и в которых есть только одна буква Я. Буквы в слове могут повторяться.
+# Найти количество слов, которые не начинаются с Н и в которых есть только одна буква Я.
+# Буквы в слове могут повторяться.
 
 def fu11():
     s = "ПЯТНИЦА"
@@ -116,6 +118,9 @@ def fu31():
     s = "012345678"
     m=["".join(x) for x in product(s,repeat=5)  if x.count('5')==1 and x[0]!='0']
     print(len(m))
+
+
+
     for i,x in enumerate(m):
         for y in ('15','35','75','51','53','57'):
             if y in x:
@@ -129,7 +134,11 @@ def fu32():
     ch=0
     s = "012345678"
     excl = ["".join(x) for x in product("1357", repeat=2) if x.count('5') == 1]
+    # excl = [x for x in product("1357", repeat=2) if x.count('5') == 1]
 
+    # print (excl)
+
+    # print("Exclude",excl)
 
     m=["".join(x) for x in product(s,repeat=5)  if x.count('5')==1 and x[0]!='0' and all( y not in "".join(x) for y in excl )]
     print (len(m),m)
@@ -139,7 +148,7 @@ def fu33():
     cnt = 0
     ch = 0
     s = "012345678"
-    excl = ["".join(x) for x in product("1357", repeat=2) if x.count('5') == 1]
+    # excl = ["".join(x) for x in product("1357", repeat=2) if x.count('5') == 1]
 
 
     m = ["".join(x) for x in product(s, repeat=5) if x.count('5') == 1 and x[0] != '0' ]
@@ -201,4 +210,4 @@ def fu36():
 # fu24()
 # fu33()
 #fu35()
-fu36()
+fu32()
