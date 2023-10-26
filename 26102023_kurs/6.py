@@ -12,31 +12,16 @@
 # ANAAA
 # В этом примере в первой строке две буквы N, во второй и третьей— по одной. Берём вторую строку, т.к. она находится в файле раньше. В этой строке чаще других встречаются буквы A и B (по два раза), выбираем букву B, т. к. она позже стоит в алфавите. В ответе для этого примера надо записать B.
 # Для выполнения этого задания следует написать программу. Ниже приведён файл, который необходимо обработать с помощью данного алгоритма.
-try:
 
-    i=0
-    n_i=10**20
-    n_s=""
-    n_c=""
-    with open("24.txt") as file:
-        for x in file:
-            st={}
-            i+=1
-sl['D']=0
-sl['C']=0
-sl['R']=0
-            sl[c]+=x.count(c)
+with open("2.py") as file:
 
-            if x.strip().count('N') < n_i:
-                n_i = x.strip().count('N')
-                n_s=x.strip()
-                for c in set(n_s):
-                    st[c]=n_s.count(c)
-                print(n_i,st,max(st, key=st.get),max(st.values()))
-
-
-
-except:
-    print ("error data")
-
+    for x in file:
+        sl = {}
+        print (x)
+        for c in set(x):
+            if c not in sl:
+                sl[c]=x.count(c)
+            else:
+                sl[c]+=x.count(c)
+        print(sl)
 
