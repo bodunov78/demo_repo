@@ -13,3 +13,4 @@ for Amin in range(1, 161):
         if check == 1:
             m = max(m, Amax - Amin)
 print(m)
+

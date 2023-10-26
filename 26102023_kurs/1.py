@@ -21,3 +21,4 @@ c=set(range(1,100))
 d=set(range(-1*10**6,20+1))
 print (len(d))
 print (c&d)
+

@@ -25,3 +25,4 @@ for Amin in range(1, 101):
             m = max(m,Amax - Amin)
             print(A)
 print(m - 1)
+
