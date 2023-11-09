@@ -1,11 +1,14 @@
 from random import *
 
 d=dict()
-rnd=[randint(1,100) for x in range(100)]
-print(rnd)
+
+rnd=[randint(1,10) for x in range(1000)]
+#
+print (rnd)
+
 for j in set(rnd):
     d[j]=rnd.count(j)
 
 print(set(rnd))
-print(d)
+print(sorted(d.values()))
 

@@ -1,4 +1,4 @@
-i=123
+i=1024*27*125*49*6*18
 d=dict()
 j=2
 while j<=i:
@@ -10,3 +10,4 @@ while j<=i:
 
     print(i,j)
 print(d)
+
