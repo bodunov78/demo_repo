@@ -11,6 +11,13 @@ def fu2(st,en,sp):
         x+=sp
     return iter(a)
 
-fu1(10,20,"sdfghjk")
-for x in fu2(1,2,0.4):
-    print (x)
+def fu3(**parma):
+    print (parma.keys(),parma.values())
+
+
+#fu1(10,20,"sdfghjk")
+fu3(abc=123,bcd=234,cde=345)
+
+# for x in fu2(1,2,0.4):
+#     print (x)
+

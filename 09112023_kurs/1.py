@@ -1,4 +1,4 @@
-i=123
+i=123*64
 d=dict()
 j=2
 while j<=i:
