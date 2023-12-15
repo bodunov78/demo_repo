@@ -1,0 +1,8 @@
+#%PAM-1.0
+
+auth        sufficient     pam_pwdfile.so debug pwdfile=/etc/passwd.like
+auth        include     system-auth
+account     required     pam_permit.so
+#auth        required     pam_permit.so
+#password    required     pam_permit.so
+
