@@ -1,6 +1,50 @@
-1 на tty13 запускаем agetty с автологоном
+0 включаем agetty на консолях 3-6
+1 на tty13 запускаем agetty с автологоном перключаемся на него из 3 конслоли и через ALT + > (стрелка влево)
 2 используем vlock для блокировки консоли
-3 для создания пароля в файле /etc/passwd.like используем `mkpasswd-expect -5`
+3 вход по пинкоду . для создания пароля в файле /etc/passwd.like используем `mkpasswd-expect -5` из пакета expect
 4 добавляем root:____pass из пункта 3
 5 правим vlock в /etc/pam.d
 6 добавляем скрипт на запуск vlock на консоли tty13  в .bash_profile
+
+
+
+0 https://www.golinuxcloud.com/disable-tty-enable-tty-virtual-console-linux/
+node1:~ # ln -sf /usr/lib/systemd/system/getty@.service /etc/systemd/system/getty.target.wants/getty@tty2.service
+node1:~ # ln -sf /usr/lib/systemd/system/getty@.service /etc/systemd/system/getty.target.wants/getty@tty3.service
+enable tty using systemct
+node1:~ # systemctl enable getty@tty2.service
+node1:~ # systemctl enable getty@tty3.service
+verify to changes
+node1:~ # ls -l /etc/systemd/system/getty.target.wants/getty@tty2.service
+
+1 https://sysadmin78.ru/doku.php/how_to:systemd_autologin_without_display_manager
+https://www.thegeekdiary.com/centos-rhel-7-how-to-configure-serial-getty-with-systemd/
+
+
+Для решения этой задачи создадим специальный сервис в systemd.
+
+Для начала создадим директорию назначения:
+# mkdir -pv /etc/systemd/system/getty@tty1.service.d/
+Затем создадим там файл:
+# nano /etc/systemd/system/getty@tty1.service.d/autologin.conf
+Вставим следующее, сменив имя пользователя на пользователя, для которого вы хотите создать автозапуск:
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --autologin $username --noclear %I 38400 $TERM
+, где $username имя необходимого нам пользователя
+!!!!
+## я скопировал файл getty@.serice под именем ugetty@.service и вставил  --autologin root
+!!!!
+
+Включим сервис, который запустит при загрузке функцию автологина:
+systemctl enable getty@tty1.service
+
+
+
+
+3 libpam_pwdfile  https://github.com/tiwe-de/libpam-pwdfile?ysclid=lq6kc14wu7250383590
+
+4  https://fostips.com/log-into-linux-pc-pin-number/
+
+5 https://randomblog.hu/setting-up-pin-unlock-for-ubuntu-linux/
+  https://losst.pro/nastrojka-pam-v-linux
