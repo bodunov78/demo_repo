@@ -12,4 +12,17 @@
 #
 
 
+# 1
+# for i in range(1,122):
+#     print(i)
 
+# 2
+# for i in range(1,122,2):
+#     print(i)
+# 3
+# for i in range(1,101):
+#     print (i**2)
+s=0
+for i in range(2,101):
+    s+=1/i
+    print (s,i)
