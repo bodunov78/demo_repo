@@ -4,3 +4,4 @@
 4 добавляем root:____pass из пункта 3
 5 правим vlock в /etc/pam.d
 6 добавляем скрипт на запуск vlock на консоли tty13  в .bash_profile
+
