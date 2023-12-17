@@ -1,3 +1,4 @@
+
 def fufa(s,l):
 
     if '1' not in s and '2' not in s and '3' not in s:

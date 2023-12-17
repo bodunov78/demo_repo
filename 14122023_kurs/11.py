@@ -1,3 +1,5 @@
+
+
 s='8'*125
 while ('333' in s) or ('888' in s):
     if '333' in s:
