@@ -30,4 +30,5 @@ for km in range(1,48):
         if arr[0][i]<48 and arr[2][i] <48 and (arr[1][i] >=48 or arr[3][i]>=48):
             ars.append(ss)
 
+
     print(km,ars)
