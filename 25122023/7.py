@@ -17,6 +17,7 @@ def fufu(n):
     elif n>2 and n%2==0:
         return sum(fufu(i) for i in range(1,n))
 
+
 d=[]
 for i in range(1,24+1):
     print (fufu(i))

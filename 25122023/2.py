@@ -4,6 +4,7 @@ sys.setrecursionlimit(10000)
 @lru_cache(None)
 
 
+
 def fufu(n):
     global d
     if n<3 :

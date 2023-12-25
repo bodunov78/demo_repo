@@ -27,6 +27,7 @@ for i in range(3,10+1):
 a=[[1,4],[2,3],[7,0],[5,6]]
 print (sorted(a))
 
+
 print( sorted(a, key=lambda x: int(x[1])))
 
 #

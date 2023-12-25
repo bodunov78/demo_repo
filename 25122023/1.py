@@ -13,8 +13,6 @@ def fufu(n):
 # print (fufu(10**6))
 
 
-
-
 for i in range(10**6):
     fufu(i)
 
