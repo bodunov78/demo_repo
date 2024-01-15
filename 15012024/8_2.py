@@ -12,14 +12,14 @@ d=0
 kk=(0,1,2,3,4,5,6,7,8,9)
 
 count = 0
-for x in range(10000000,100000000,5):
+for x in range(100000000,1000000000,5):
     m=set(str(x))
     var=[]
-    if len(m)==8 and str(x)[0]!='0':
+    if len(m)==9 :
         var=[int(k) for k in str(x)]
 
 
-        if (var[0]%2==var[2]%2==var[4]%2==var[6]%2) and(var[1]%2==var[3]%2==var[5]%2==var[7]%2):
+        if (var[0]%2==var[2]%2==var[4]%2==var[6]%2==var[8]%2) and(var[1]%2==var[3]%2==var[5]%2==var[7]%2):
             count+=1
             # print(var,count,m)
 
