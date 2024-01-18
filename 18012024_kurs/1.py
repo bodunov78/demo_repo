@@ -65,6 +65,7 @@ def cmb(a,b,n):
 
 
 a=[bin(x)[2:].zfill(y) for x in range(20) for y in range(1,5)]
+print (a)
 b=["001","100","111"]
 v=[1,4,8]
 d=[1,1,2,4,0]
