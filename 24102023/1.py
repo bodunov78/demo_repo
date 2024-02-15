@@ -1,11 +1,21 @@
-from itertools import *
-a=[32,3,37,8,2,17,1]
-b=[i for i in range(1,101)]
-for i in range(1,8):
-    for c in permutations(a,i):
-        s=sum(c)
-        if s in b:
-            b.remove(s)
-print(b)
+# j=0
+# for i in (1,4,6,8,0,20,0,0,0,1,1,1,1,1):
+#     j+=1
+#     print ("Маша-Cаша+Даша=love",j)
+# j=0
+# for i in range(13):
+#     j+=1
+#     print ("Маша-Cаша+Даша=love",j)
+#
 
+from random import *
+from time import *
 
+ts=time()
+i=30
+while True:
+    i=randint(0,100)
+    if i%7==0 and i%9==5:
+        print ("Счастье есть, оно не может не есть!!!",i)
+    if time()-ts > 10:
+        break
