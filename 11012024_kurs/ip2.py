@@ -45,10 +45,11 @@ for x in net4:
 # #
 # #
 # # # subnet1 = ip_network('80.0.1.0/28')
-# # for i in range(1,33):
-# #     subnet1=ip_network(f"224.128.112.142/{i}", 0)
-# #     print(subnet1.with_netmask)
-# #
+for i in range(1,33):
+    subnet1=ip_network(f"224.128.112.142/{i}", 0)
+    print(subnet1)
+    # print(subnet1.with_netmask)
+
 # # #Тип 13 9363
 # #
 # # for i in range(1,33):

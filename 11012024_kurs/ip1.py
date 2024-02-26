@@ -1,11 +1,6 @@
 from ipaddress import *
 
 
-
-
-
-
-
 #Тип 13 7669
 
 
