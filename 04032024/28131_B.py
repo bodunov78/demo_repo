@@ -1,6 +1,6 @@
 with open("28131_B.txt") as f:
     n=f.readline()
-    m=[0]*120
+    m=[-1]*120
     print (m)
     maxi=-10**19
     for x in f:
@@ -11,3 +11,4 @@ with open("28131_B.txt") as f:
         if x>m[x%120]:
             m[x%120]=x
     print(maxi,n)
+    print (m)
