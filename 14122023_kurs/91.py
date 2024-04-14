@@ -13,6 +13,7 @@ def fufa(s,l):
         for k in a:
             if k in s :
                 m=s.replace(k,a[k],1)
+                print (f"S-M {s} :{m}")
                 m=fufa(m,l+1)
                 if m:
                     return m
@@ -20,7 +21,8 @@ def fufa(s,l):
 
 
 s="001000001110001010"
-print("!",fufa(s,0))
+k=fufa(s,0)
+print("!",k)
 
 
 
