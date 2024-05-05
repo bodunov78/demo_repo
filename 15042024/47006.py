@@ -9,5 +9,5 @@ with open("47006.txt") as f:
         c = [(sum(x) - max(x) > max(x)) for x in a]
         if all(c):
             cnt += 1
-          # SSS
+            #SSS
     print(cnt)
