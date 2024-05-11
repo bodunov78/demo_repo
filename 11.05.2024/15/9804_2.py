@@ -3,7 +3,9 @@ def fu(x,a):
 
 
 
-for A in range(0,1000):
+for A in range(0,100):
+    # m=[fu(x,A) for x in range(1000)]
+    # print (m)
     if all(fu(x,A) for x in range(1000)):
         print(A)
-        break
+        # break

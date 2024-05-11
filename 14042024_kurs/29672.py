@@ -16,7 +16,7 @@ for i in range(0,len(m)-n):
 
 print(maxi)
 
-n=3+1
+n=3+1  1 2 3 4 ...20 21 ......199
 a=[-1,3,5,9,20,50,100,150,200]
 for i in range(len(a)-n):
     print(i,a[i+n]-a[i]-1)

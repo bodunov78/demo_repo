@@ -4,7 +4,7 @@ with open("35913.txt") as f:
         s=s.strip()
         us=list(set(s))
         us.sort()
-        ds=set()
+
         n=s.count('N')
         if n<nmin:
             nmin=min(n,nmin)

@@ -8,7 +8,7 @@ with open("33526.txt") as f:
     for i in range(len(s)-2):
         if s[i]==s[i+2]:
             di[s[i+1]]+=1
-
+    print(di)
     maxi=-10**19
     for x,y in di.items():
         if y > maxi:

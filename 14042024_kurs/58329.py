@@ -4,6 +4,8 @@ with open("58329.txt") as f:
     ns=""
 
 
+    # 3 4 5 1  9
+    s="345190"
     maxi=-10**19
     for i in range(len(s)-2):
         if int(s[i])+int(s[i+1])>int(s[i+2]):
