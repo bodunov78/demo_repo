@@ -42,5 +42,5 @@ def a0(x):
     print(m, "\n", time() - ts)
 
 
-a3(x)
+a1(x)
 
