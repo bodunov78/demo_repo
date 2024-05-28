@@ -1,7 +1,19 @@
 #64947
+
+#6
 with open("64947.txt") as f:
     a=[int(x) for x in f]
-    k832=max(int(x) for x in a if x%1000==832)
+    k832=max(x for x in a if x%1000==832)
+
+    k832=-10**19
+    for x in a:
+        if x%1000==832:
+            k832=max(k832,x)
+
+
+
+
+
     cnt=0
     maxi=-10**19
     for i in range(len(a)-2):
