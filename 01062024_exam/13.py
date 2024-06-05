@@ -6,10 +6,11 @@ a=0
 print (net4)
 for x in net4:
     a+=1
-    print (f"{x:b},{x},{a}",f"{x:b}".count('1'))
-    #кол-во 1
-    s=f"{x:b}".count('1')
-    print (s)
+    print (f"{bin(int(x))[2:]},{x},{a}")
+
+    #кол-во 1,0
+    s=bin(int(x))[2:]
+    print (s,s.count('1'),s.count('0'))
 
 
 # первый в списке адрес сети, последний широковещательный, делаем поправку
