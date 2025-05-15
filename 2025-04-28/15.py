@@ -1,0 +1,13 @@
+#1:16
+
+def f(x,y,A):
+    return ((x-3*y<A) or (y>400) or (x>56))
+
+
+
+for A in range(0,1000):
+
+    if all(f(x,y,A)==1 for x in range(1000) for y in range(1000)):
+        print (A)
+        break
+#1:18
