@@ -7,8 +7,8 @@ def dista(p1,p2):
     return (((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2)**0.5)
 
 def fil():
-    with open("27A.txt") as f:
-
+    with open("1002_27_B.txt") as f:
+        s=f.readline()
         m=[list(map(float,x.replace(',','.').split()))for x in f ]
         print (m,len(m))
         clusters=[]
@@ -61,6 +61,7 @@ def filr():
         print (len(cl))
         print (Px*10000/2,Py/2*10000)
 
+        print(abs(Px * 10000 / 2 // 1), abs(Py / 2 * 10000 // 1))
 
 
 fil()
