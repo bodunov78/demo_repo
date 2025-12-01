@@ -16,6 +16,7 @@ def f1(s):
 with open("24_17535.txt") as f:
     s=f.readline()
     print(len(s))
+    s=s+"CD"
     # f1(s)
     ind=[]
     k=[]
@@ -23,16 +24,21 @@ with open("24_17535.txt") as f:
         if s[i]=='C' and s[i+1]=='D':
             ind.append(i+1)
     print (len(ind))
-    # print (ind[:160])
+    print (ind[:160])
     for i in range(160,len(ind)-1):
         if i!=160:
-            ss=s[ind[i-160-1]-1:ind[i+1]]
-        else:
+            ss=s[ind[i-160-1]:ind[i]-1+1]
+            print(ss.count('CD'), len(ss),s[ind[i-160-1]],s[ind[i]-1] )
+            k.append(len(ss))
+            break
+        elif i==160:
             # e=ind[i+1]
-            ss=s[:ind[i+1]]
-        k.append(f1(ss))
+            ss=s[0:ind[i]-1]
+            print (ss.count('CD'),len(ss))
+            k.append(len(ss))
+        # k.append(f1(ss))
 
     print (max(k))
-
+    #
 
 print (time()-ts)
