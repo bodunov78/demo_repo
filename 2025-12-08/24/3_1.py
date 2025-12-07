@@ -34,6 +34,8 @@ with open("3.txt") as f:
 
 
 
+
+
 k = 0
 l = 0
 m = []

@@ -17,3 +17,6 @@ with open("0.txt") as f:
 
     print(max(m))
 
+\
+
+

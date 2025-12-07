@@ -19,3 +19,4 @@ for r in range(len(s)):
         if s[l]=='.': k-=1
         l+=1
 print(min(m))
+

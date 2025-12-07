@@ -22,6 +22,7 @@ with open("0.txt") as f:
 
 
 
+
     k = 0
     l = 0
     m = []
