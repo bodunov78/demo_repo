@@ -213,6 +213,39 @@ def f8_1():
         print (time()-ts)
 
 
+
+def f9():
+
+    with open("9.txt") as f:
+        cnt=0
+        for s in f:
+            s.strip()
+            a=list(map(int,s.split()))
+            # print (a)
+            b=sorted(a)
+            if b==a and len(a)==len(set(a)):
+                # print (b,a)
+                m=[a%2 for a in b]
+                # print (a,b,m)
+                if sum(m)==3:
+                    print (a,b,m,sum(a))
+                    break
+    print (cnt)
+def f9_1():
+
+    with open("9.txt") as f:
+        otv = []
+
+        for s in f:
+            a = list(map(int, s.split()))
+            cet = [i for i in a if i % 2 == 0]
+            necet = [i for i in a if i % 2 != 0]
+            if a[0] < a[1] < a[2] < a[3] < a[4] < a[5]:
+                if len(cet) == len(necet):
+                    otv.append(sum(a))
+        print(otv[0])
+
+
 def f8_1():
     ts=time()
     with open("8.txt") as f:
@@ -257,7 +290,17 @@ def f10():
     print (ceil(mbit*13/8)) #байт на 1 код
     print (ceil((ceil(log2(60))+ceil(log2(12)))/8)) #байт на срок
 
+
 def f11():
+
+    sym=101
+    nsymb=4090+10
+    i=ceil(log2(nsymb))
+    Ksymb=ceil(sym*i/8)
+
+    print (Ksymb*2048/1024)
+
+def f11_1():
     def f(s):
         while '111' in s:
             s=s.replace('111','22',1)
@@ -463,4 +506,4 @@ def f27():
 
     print(f(1,49)-f(1, 20)*f(20,49) )
 
-f8()
+f11()
