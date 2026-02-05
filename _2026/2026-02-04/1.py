@@ -54,7 +54,60 @@ def f4():
         if f(n)>123:
             print (f(n))
             break
+
 def f5():
+    def chi(n):
+        s=str(n)
+
+        n1=int(s[0])+int(s[1])
+        n2 = int(s[1]) + int(s[2])
+        if n1>n2:
+            ss=int(str(n2)+str(n1))
+        else:
+            ss = int(str(n1) + str(n2))
+        return ss
+    cnt=0
+    for n in range(100,999+1):
+        if chi(n)==1216:
+            cnt+=1
+    print (cnt)
+
+
+
+def f6():
+    screensize(5000, 5000)
+    tracer(0)
+    down()
+    k = 20
+    # Вектор перемещения (dx, dy)
+
+    # Получить текущую позицию
+    curr_x, curr_y = pos()
+
+    # Переместиться на вектор
+    dx, dy = 3, 1
+
+    goto(curr_x + dx*k, curr_y + dy*k)
+    dx, dy = -2, 6
+
+    goto(curr_x + dx*k, curr_y + dy*k)
+
+
+    dx, dy = 0, 0
+
+    goto(curr_x + dx*k, curr_y + dy*k)
+    up()
+
+    for i in range(-50, 50):
+        for j in range(-50, 50):
+            goto(i * k, j * k)
+            dot(3, "Red")
+
+    done()
+    # g=8 v =7 s=g/2+v-1 =10
+    s=s*100
+
+def f5_1():
 
 
     screensize(5000, 5000)
@@ -89,7 +142,7 @@ def f5():
 
     done()
 
-def f6():
+def f6_1():
     old=640*480*16 #размер старой фото
     new=1280*960*24 #размер новой фото
     v_old=old*12/1  #скорость канала  бит в сек
@@ -98,8 +151,24 @@ def f6():
     print (v_new/new) #кол-во новых фото на новой скорости в сек
 
 
-
 def f7():
+    size=300*200
+    I=30*1024*8
+    i=int(I/size)
+    N=2**i
+    print(N)
+
+
+def f8():
+    lng="РУСЛАН"
+    cnt=0
+    for s in permutations(lng,6):
+        s="".join(s)
+        s=s.replace('У','А')
+        if 'АА' not in s :
+            cnt+=1
+    print (cnt)
+def f7_1():
 
     s=list("АВТОР")
     s.sort()
@@ -114,7 +183,7 @@ def f7():
 
 
 
-def f8():
+def f8_1():
     ts=time()
     with open("8.txt") as f:
         a=[]
@@ -394,4 +463,4 @@ def f27():
 
     print(f(1,49)-f(1, 20)*f(20,49) )
 
-f2()
+f8()
