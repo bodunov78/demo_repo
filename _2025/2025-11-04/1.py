@@ -11,8 +11,8 @@ def f1():
 
     # 2 72559
 
-    t = "12,14,19,27,34,35,36,46,49,58,67,68,78"
-    g = "AB,AD,BV,BD,VE,EI,EK,KI,ID,IJ,JD,JG,GA"
+    t = "12,16,23,28,35,45,36,47,53,54,56,68,78"
+    g = "AE,EJ,EV,VD,JG,DG,GB,BV,BK,IJ,JD,JG,GA"
     t = t + ',' + t[::-1]
     g = g + ',' + g[::-1]
 
@@ -28,10 +28,10 @@ def f1():
 
 def f2():
     def f(x,y,z,w):
-        return ((x and (not(y)))or (x==z) or (not(w)))
+        return ((not(x and y)) or not(((y==z)) and (not(w)) ))
 
     for a1, a2, a3, a4 in product([0, 1], repeat=4):
-        tab = [(a1, a2, 0, 0), (1, 1, 1, 0), (1, 0, a3, a4)]
+        tab = [(a1, 0, 0, 1), (1, a2, 0, a3), (0, 1, a4, 1)]
         if len(tab) == len(set(tab)):
             for p in permutations('xyzw'):
                 if [f(**dict(zip(p, r))) for r in tab] == [0, 0, 0]:
@@ -391,4 +391,4 @@ def f27():
 
     print(f(1, 49))
 
-f5()
+f2()
