@@ -4,12 +4,12 @@ suma_c=-1
 mini=10**20
 flag=0
 cnt=0
-for a3 in range(ceil(100_000/7),100000//8,-1):
-    for a6 in range(100_000-a3*7,1,-1):
+for a6 in range(100_000//7,100000//8,-1):
+    for a3 in range(0,100_000-a6):
         if flag==1:
             flag=0
             break
-        for a9 in range(100_000-a6*8,1,-1):
+        for a9 in range(0,100_000):
             suma_c=a3 + a6 + a9
             if suma_c > 300 :
 
@@ -31,3 +31,4 @@ for a3 in range(ceil(100_000/7),100000//8,-1):
                 break
 
 print (mini)
+print (0**0)
